@@ -141,8 +141,8 @@ namespace PDFtoText
                     }
                 }
                 dataextract(builder.ToString());
-                finaltext = getdata("Construction Name");
-                //finaltext = builder.ToString();
+                //finaltext = getdata("Construction Name");
+                finaltext = builder.ToString();
             }
         }
 
