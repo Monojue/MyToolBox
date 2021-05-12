@@ -20,7 +20,7 @@ namespace PDFtoText
     public partial class Form1 : Form
     {
 
-        string finaltext, pagefromtext;
+        string finaltext;
         int lib;
         List<string> sptext;
        
@@ -221,10 +221,25 @@ namespace PDFtoText
         {
             lib = cbox.SelectedIndex;
         }
-
+        List<string> list = new List<string>();
         private void button2_Click(object sender, EventArgs e)
         {
-           Rtext.Text = Encoding.UTF8.GetString(ASCIIEncoding.Convert(Encoding.Default, Encoding.UTF8, Encoding.Default.GetBytes(finaltext)));
+            //Rtext.Text = Encoding.UTF8.GetString(ASCIIEncoding.Convert(Encoding.Default, Encoding.UTF8, Encoding.Default.GetBytes(finaltext)));
+           
+
+
+            for (int i = 0; i < sptext.Count; i++)
+            {
+                if (sptext[i].Contains("Construction period"))
+                {
+                    list.Add(sptext[i].Substring(sptext[i].IndexOf("自")+2, 10));
+                    list.Add(sptext[i].Substring(sptext[i].IndexOf("至")+2, 10));
+                    list.Add(sptext[i].Substring(sptext[i].IndexOf("施工日数：")+6).Replace("Days", ""));
+                }
+            }
+
+
+
         }
 
 

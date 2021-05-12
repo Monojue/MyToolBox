@@ -57,3 +57,10 @@ C:\VSCode\PDFtoForm\PDFtoText\obj\Debug\PDFtoText.csproj.CoreCompileInputs.cache
 C:\VSCode\PDFtoForm\PDFtoText\obj\Debug\PDFtoText.csproj.CopyComplete
 C:\VSCode\PDFtoForm\PDFtoText\obj\Debug\PDFtoText.exe
 C:\VSCode\PDFtoForm\PDFtoText\obj\Debug\PDFtoText.pdb
+C:\VSCode\PDFtoForm\PDFtoText\obj\Debug\PDFtoText.Form2.resources
+C:\VSCode\PDFtoForm\PDFtoText\obj\Debug\PDFtoText.Form3.resources
+C:\VSCode\PDFtoForm\PDFtoText\obj\Debug\PDFtoText.Form4.resources
+C:\VSCode\PDFtoForm\PDFtoText\obj\Debug\PDFtoText.MainForm.resources
+C:\VSCode\PDFtoForm\PDFtoText\obj\Debug\PDFtoText.UserControl1.resources
+C:\VSCode\PDFtoForm\PDFtoText\obj\Debug\PDFtoText.TempForm.resources
+C:\VSCode\PDFtoForm\PDFtoText\obj\Debug\PDFtoText.csExporter.resources

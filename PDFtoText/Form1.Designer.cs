@@ -107,6 +107,7 @@
             // 
             // cbox
             // 
+            this.cbox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbox.FormattingEnabled = true;
             this.cbox.Items.AddRange(new object[] {
             "PDFbox",
