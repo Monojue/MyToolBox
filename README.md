@@ -2,7 +2,7 @@
 
 ### This tool is develped for my daily job need.
 
-[Download Here](https://github.com/Monojue/MyToolBox/raw/main/PDFtoText/bin/Debug/PDFtoText.exe)
+[Download Here](https://github.com/Monojue/MyToolBox/raw/main/PDFtoText/bin/Release.zip)
 
 1.  Insert file link here.
 
