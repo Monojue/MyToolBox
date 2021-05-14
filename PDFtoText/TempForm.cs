@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+using System.Diagnostics;
 
 namespace PDFtoText {
     public partial class TempForm : UserControl {
@@ -19,8 +20,10 @@ namespace PDFtoText {
 
         int i = 0;
         Boolean copy = true;
+        Boolean groupCheck = false;
         string dir = "";
         string nextdir = "";
+        RichTextBoxScrollBars scroll = new RichTextBoxScrollBars();
 
         private void btnBack_Click(object sender, EventArgs e) {
             try {
@@ -41,7 +44,7 @@ namespace PDFtoText {
                 dir = Path.GetDirectoryName(tbInput.Lines[tbInput.Lines.Count() - 1]);
             }
 
-            if (dir.Equals(nextdir)) {
+            if (dir.Equals(nextdir) && groupCheck) {
                 while (dir.Equals(nextdir)) {
                     i--;
                     try {
@@ -52,10 +55,13 @@ namespace PDFtoText {
                     }
                 }
                 tbShow.Text = tbInput.Lines[i - 1];
+                refreshtbInput();
                 lblnof.Text = "Group";
                 if (copy) Clipboard.SetText(dir);
             } else {
                 tbShow.Text = tbInput.Lines[i - 1];
+                scroll = tbInput.ScrollBars;
+                refreshtbInput();
                 lblnof.Text = "";
                 if (copy) Clipboard.SetText(tbShow.Text);
             }
@@ -81,7 +87,7 @@ namespace PDFtoText {
                 nextdir = Path.GetDirectoryName(tbInput.Lines[0]);
             }
 
-            if (dir.Equals(nextdir)) {
+            if (dir.Equals(nextdir) && groupCheck) {
                 while (dir.Equals(nextdir)) {
                     i++;
                     try {
@@ -92,10 +98,13 @@ namespace PDFtoText {
                     }
                 }
                 tbShow.Text = tbInput.Lines[i - 1];
+                refreshtbInput();
                 lblnof.Text = "Group";
                 if (copy) Clipboard.SetText(dir);
             } else {
                 tbShow.Text = tbInput.Lines[i - 1];
+                scroll = tbInput.ScrollBars;
+                refreshtbInput();
                 lblnof.Text = "";
                 if (copy) Clipboard.SetText(tbShow.Text);
             }
@@ -106,6 +115,7 @@ namespace PDFtoText {
         String frompath = "";
         string fileName = null;
         string root = @"C:\ProgramData\CoBeing\GaiaCloud\Temp";
+        List<int> movedfile = new List<int>();
 
         private void btnMove_Click(object sender, EventArgs e) {
             try {
@@ -125,8 +135,36 @@ namespace PDFtoText {
                     File.Copy(frompath, dispath + @"\" + fileName + ".csv");
                 }
                 lblMove.Text = fileName;
+                movedfile.Add(i-1);
+                refreshtbInput();
+                if (cbAuto.Checked) btnNext_Click(sender, e);
             } catch (IOException) {
                 MessageBox.Show("Error Occoured!");
+            }
+        }
+
+        private void refreshtbInput(){
+            string[] Lines = new string[0];
+            Lines = tbInput.Lines;
+            tbInput.Clear();
+            
+            for (int j = 0; j <= Lines.Count() - 1; j++) {
+
+                if (tbShow.Text.Equals(Lines[j]))
+                    tbInput.SelectionColor = Color.Red;
+
+                if (movedfile.Contains(j))
+                    tbInput.SelectionColor = Color.Green;
+
+                if (movedfile.Contains(j)&& tbShow.Text.Equals(Lines[j]))
+                    tbInput.SelectionColor = Color.Blue;
+
+                if (j < Lines.Count() - 1)
+                    tbInput.AppendText(Lines[j] + "\r\n");
+                else
+                    tbInput.AppendText(Lines[j]);
+
+                tbInput.ScrollBars = scroll;
             }
         }
 
@@ -140,6 +178,7 @@ namespace PDFtoText {
 
         private void tbNo_TextChanged(object sender, EventArgs e) {
             lblC1.Text = tbNo.Lines.Count().ToString();
+            
         }
 
         private void tbInput_TextChanged(object sender, EventArgs e) {
@@ -148,6 +187,19 @@ namespace PDFtoText {
 
         private void cbCopy_CheckedChanged(object sender, EventArgs e) {
             copy = cbCopy.Checked;
+        }
+
+        private void btnOpen_Click(object sender, EventArgs e) {
+            Process.Start(tbShow.Text);
+        }
+
+        private void cbAuto_CheckedChanged(object sender, EventArgs e) {
+            btnNext.Enabled = !cbAuto.Checked;
+            btnBack.Enabled = !cbAuto.Checked;
+        }
+
+        private void cbGcheck_CheckedChanged(object sender, EventArgs e) {
+            groupCheck = cbGcheck.Checked;
         }
     }
 }

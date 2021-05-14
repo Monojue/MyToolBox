@@ -157,12 +157,6 @@
     <Compile Include="TempForm.Designer.cs">
       <DependentUpon>TempForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControl1.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UserControl1.Designer.cs">
-      <DependentUpon>UserControl1.cs</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="csExporter.resx">
       <DependentUpon>csExporter.cs</DependentUpon>
     </EmbeddedResource>
@@ -192,9 +186,6 @@
     </Compile>
     <EmbeddedResource Include="TempForm.resx">
       <DependentUpon>TempForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UserControl1.resx">
-      <DependentUpon>UserControl1.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

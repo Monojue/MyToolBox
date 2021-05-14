@@ -39,6 +39,9 @@
             this.tbNo = new System.Windows.Forms.RichTextBox();
             this.lblI = new System.Windows.Forms.Label();
             this.lblfilename = new System.Windows.Forms.Label();
+            this.btnOpen = new System.Windows.Forms.Button();
+            this.cbAuto = new System.Windows.Forms.CheckBox();
+            this.cbGcheck = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // btnBack
@@ -53,14 +56,14 @@
             // 
             // tbPath
             // 
-            this.tbPath.Location = new System.Drawing.Point(399, 65);
+            this.tbPath.Location = new System.Drawing.Point(191, 59);
             this.tbPath.Name = "tbPath";
             this.tbPath.Size = new System.Drawing.Size(298, 19);
             this.tbPath.TabIndex = 21;
             // 
             // btnMove
             // 
-            this.btnMove.Location = new System.Drawing.Point(703, 63);
+            this.btnMove.Location = new System.Drawing.Point(622, 57);
             this.btnMove.Name = "btnMove";
             this.btnMove.Size = new System.Drawing.Size(104, 23);
             this.btnMove.TabIndex = 20;
@@ -104,7 +107,7 @@
             "SekkeishoJoken",
             "SekkeishoKoseihi",
             "SekkeishoRendo"});
-            this.cbox.Location = new System.Drawing.Point(272, 64);
+            this.cbox.Location = new System.Drawing.Point(495, 59);
             this.cbox.Name = "cbox";
             this.cbox.Size = new System.Drawing.Size(121, 20);
             this.cbox.TabIndex = 31;
@@ -123,7 +126,7 @@
             // lblnof
             // 
             this.lblnof.AutoSize = true;
-            this.lblnof.Location = new System.Drawing.Point(535, 13);
+            this.lblnof.Location = new System.Drawing.Point(453, 13);
             this.lblnof.Name = "lblnof";
             this.lblnof.Size = new System.Drawing.Size(17, 12);
             this.lblnof.TabIndex = 29;
@@ -183,10 +186,45 @@
             this.lblfilename.TabIndex = 23;
             this.lblfilename.Text = "filename";
             // 
+            // btnOpen
+            // 
+            this.btnOpen.Location = new System.Drawing.Point(732, 57);
+            this.btnOpen.Name = "btnOpen";
+            this.btnOpen.Size = new System.Drawing.Size(75, 23);
+            this.btnOpen.TabIndex = 32;
+            this.btnOpen.Text = "Open";
+            this.btnOpen.UseVisualStyleBackColor = true;
+            this.btnOpen.Click += new System.EventHandler(this.btnOpen_Click);
+            // 
+            // cbAuto
+            // 
+            this.cbAuto.AutoSize = true;
+            this.cbAuto.Location = new System.Drawing.Point(622, 12);
+            this.cbAuto.Name = "cbAuto";
+            this.cbAuto.Size = new System.Drawing.Size(75, 16);
+            this.cbAuto.TabIndex = 33;
+            this.cbAuto.Text = "AutoMode";
+            this.cbAuto.UseVisualStyleBackColor = true;
+            this.cbAuto.CheckedChanged += new System.EventHandler(this.cbAuto_CheckedChanged);
+            // 
+            // cbGcheck
+            // 
+            this.cbGcheck.AutoSize = true;
+            this.cbGcheck.Location = new System.Drawing.Point(519, 12);
+            this.cbGcheck.Name = "cbGcheck";
+            this.cbGcheck.Size = new System.Drawing.Size(86, 16);
+            this.cbGcheck.TabIndex = 34;
+            this.cbGcheck.Text = "GroupCheck";
+            this.cbGcheck.UseVisualStyleBackColor = true;
+            this.cbGcheck.CheckedChanged += new System.EventHandler(this.cbGcheck_CheckedChanged);
+            // 
             // TempForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.cbGcheck);
+            this.Controls.Add(this.cbAuto);
+            this.Controls.Add(this.btnOpen);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.tbPath);
             this.Controls.Add(this.btnMove);
@@ -227,5 +265,8 @@
         private System.Windows.Forms.RichTextBox tbNo;
         private System.Windows.Forms.Label lblI;
         private System.Windows.Forms.Label lblfilename;
+        private System.Windows.Forms.Button btnOpen;
+        private System.Windows.Forms.CheckBox cbAuto;
+        private System.Windows.Forms.CheckBox cbGcheck;
     }
 }
