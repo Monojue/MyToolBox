@@ -1,7 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PDFtoText", "PDFtoText\PDFtoText.csproj", "{B07D74C2-9B19-467E-8E98-A97E65DBEB20}"
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.1382
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyToolBox", "MyToolBox\MyToolBox.csproj", "{B07D74C2-9B19-467E-8E98-A97E65DBEB20}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{5D75D77D-65F5-4833-A67A-5D12C3A769F5}"
 EndProject
@@ -18,5 +20,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {987B6CAD-1B63-4891-B1DD-49A720FC455D}
 	EndGlobalSection
 EndGlobal
