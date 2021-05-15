@@ -31,8 +31,8 @@ This tool is develped for my daily job need.
 
     ![01](images/06.png)
 
-7.  "GroupCheck" is checked - automically search is there group file.<br />
-    "AutoMode" is checked - when click the TempToFolder button, move file and select next link automically.<br />
-    "AutoCopy" is checked - when Next and Back button is click link will automically copy to clipboard.<br />
+7.  - "GroupCheck" is checked - automically search is there group file.<br />
+    - "AutoMode" is checked - when click the TempToFolder button, move file and select next link automically.<br />
+    - "AutoCopy" is checked - when Next and Back button is click link will automically copy to clipboard.<br />
 
     ![01](images/07.png)
