@@ -10,7 +10,7 @@ using System.Windows.Forms;
 using System.IO;
 using System.Diagnostics;
 
-namespace PDFtoText {
+namespace MyToolBox {
     public partial class TempForm : UserControl {
         public TempForm() {
             InitializeComponent();

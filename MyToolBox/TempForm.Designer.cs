@@ -1,4 +1,4 @@
-﻿namespace PDFtoText {
+﻿namespace MyToolBox {
     partial class TempForm {
         /// <summary> 
         /// Required designer variable.

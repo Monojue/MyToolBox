@@ -1,4 +1,4 @@
-﻿namespace PDFtoText {
+﻿namespace MyToolBox {
     partial class Form3 {
         /// <summary>
         /// Required designer variable.

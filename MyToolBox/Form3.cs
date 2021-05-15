@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace PDFtoText {
+namespace MyToolBox {
     public partial class Form3 : Form {
         public Form3() {
             InitializeComponent();

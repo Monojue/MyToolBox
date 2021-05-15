@@ -1,4 +1,4 @@
-﻿namespace PDFtoText {
+﻿namespace MyToolBox {
     partial class csExporter {
         /// <summary> 
         /// Required designer variable.
