@@ -149,8 +149,7 @@
             this.cbGcheck.TabIndex = 51;
             this.cbGcheck.Text = "GroupCheck";
             this.cbGcheck.UseVisualStyleBackColor = true;
-            this.cbGcheck.CheckedChanged += new System.EventHandler(this.cbGcheck_CheckedChanged_1);
-            this.cbGcheck.Click += new System.EventHandler(this.cbGcheck_CheckedChanged);
+            this.cbGcheck.CheckedChanged += new System.EventHandler(this.cbGcheck_CheckedChanged);
             // 
             // cbAuto
             // 
@@ -161,7 +160,7 @@
             this.cbAuto.TabIndex = 50;
             this.cbAuto.Text = "AutoMode";
             this.cbAuto.UseVisualStyleBackColor = true;
-            this.cbAuto.Click += new System.EventHandler(this.cbAuto_CheckedChanged);
+            this.cbAuto.CheckedChanged += new System.EventHandler(this.cbAuto_CheckedChanged);
             // 
             // lblnof
             // 
@@ -181,7 +180,7 @@
             this.cbCopy.TabIndex = 49;
             this.cbCopy.Text = "AutoCopy";
             this.cbCopy.UseVisualStyleBackColor = true;
-            this.cbCopy.Click += new System.EventHandler(this.cbCopy_CheckedChanged);
+            this.cbCopy.CheckedChanged += new System.EventHandler(this.cbCopy_CheckedChanged);
             // 
             // panel9
             // 

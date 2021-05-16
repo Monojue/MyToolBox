@@ -48,14 +48,14 @@ namespace MyToolBox {
 
             if (dir.Equals(nextdir) && groupCheck) {
                 while (dir.Equals(nextdir)) {
+                    groupFile.Add(i - 1);
                     i--;
                     try {
                         dir = Path.GetDirectoryName(tbInput.Lines[i - 1]);
                         nextdir = Path.GetDirectoryName(tbInput.Lines[i - 2]);
                     } catch (IndexOutOfRangeException) {
-                        dir = Path.GetDirectoryName(tbInput.Lines[tbInput.Lines.Count()]);
+                        dir = Path.GetDirectoryName(tbInput.Lines[tbInput.Lines.Count()-1]);
                     }
-                    groupFile.Add(i - 1);
                 }
                 tbShow.Text = tbInput.Lines[i - 1];
                 refreshtbInput();
@@ -92,6 +92,7 @@ namespace MyToolBox {
 
             if (dir.Equals(nextdir) && groupCheck) {
                 while (dir.Equals(nextdir)) {
+                    groupFile.Add(i - 1);
                     i++;
                     try {
                         dir = Path.GetDirectoryName(tbInput.Lines[i - 1]);
@@ -99,7 +100,6 @@ namespace MyToolBox {
                     } catch (IndexOutOfRangeException) {
                         nextdir = Path.GetDirectoryName(tbInput.Lines[0]);
                     }
-                    groupFile.Add(i - 1);
                 }
                 tbShow.Text = tbInput.Lines[i - 1];
                 refreshtbInput();
@@ -170,6 +170,7 @@ namespace MyToolBox {
 
                 tbInput.ScrollBars = scroll;
             }
+            groupFile.Clear();
         }
 
         private void tbShow_TextChanged(object sender, EventArgs e) {
@@ -204,14 +205,11 @@ namespace MyToolBox {
 
         private void cbGcheck_CheckedChanged(object sender, EventArgs e) {
             groupCheck = cbGcheck.Checked;
+            groupFile.Clear();
         }
 
         private void btnOpenTemp_Click(object sender, EventArgs e) {
             Process.Start(tbPath.Text);
-        }
-
-        private void cbGcheck_CheckedChanged_1(object sender, EventArgs e) {
-            groupFile.Clear();
         }
     }
 }

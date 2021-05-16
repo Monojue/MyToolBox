@@ -11,4 +11,3 @@ C:\VSCode\MyToolBox\MyToolBox\obj\Release\MyToolBox.csExporter.resources
 C:\VSCode\MyToolBox\MyToolBox\obj\Release\MyToolBox.Form3.resources
 C:\VSCode\MyToolBox\MyToolBox\obj\Release\MyToolBox.MainForm.resources
 C:\VSCode\MyToolBox\MyToolBox\obj\Release\MyToolBox.TempForm.resources
-C:\VSCode\MyToolBox\MyToolBox\obj\Release\MyToolBox.TempManagerForm.resources
