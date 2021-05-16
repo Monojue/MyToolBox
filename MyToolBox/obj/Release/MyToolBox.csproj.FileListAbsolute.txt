@@ -1,9 +1,5 @@
 C:\VSCode\MyToolBox\MyToolBox\obj\Release\MyToolBox.csprojAssemblyReference.cache
-C:\VSCode\MyToolBox\MyToolBox\obj\Release\PDFtoText.csExporter.resources
-C:\VSCode\MyToolBox\MyToolBox\obj\Release\PDFtoText.Form3.resources
-C:\VSCode\MyToolBox\MyToolBox\obj\Release\PDFtoText.MainForm.resources
 C:\VSCode\MyToolBox\MyToolBox\obj\Release\MyToolBox.Properties.Resources.resources
-C:\VSCode\MyToolBox\MyToolBox\obj\Release\PDFtoText.TempForm.resources
 C:\VSCode\MyToolBox\MyToolBox\obj\Release\MyToolBox.csproj.GenerateResource.cache
 C:\VSCode\MyToolBox\MyToolBox\obj\Release\MyToolBox.csproj.CoreCompileInputs.cache
 C:\VSCode\MyToolBox\MyToolBox\bin\Release\MyToolBox.exe.config
@@ -11,3 +7,8 @@ C:\VSCode\MyToolBox\MyToolBox\bin\Release\MyToolBox.exe
 C:\VSCode\MyToolBox\MyToolBox\bin\Release\MyToolBox.pdb
 C:\VSCode\MyToolBox\MyToolBox\obj\Release\MyToolBox.exe
 C:\VSCode\MyToolBox\MyToolBox\obj\Release\MyToolBox.pdb
+C:\VSCode\MyToolBox\MyToolBox\obj\Release\MyToolBox.csExporter.resources
+C:\VSCode\MyToolBox\MyToolBox\obj\Release\MyToolBox.Form3.resources
+C:\VSCode\MyToolBox\MyToolBox\obj\Release\MyToolBox.MainForm.resources
+C:\VSCode\MyToolBox\MyToolBox\obj\Release\MyToolBox.TempForm.resources
+C:\VSCode\MyToolBox\MyToolBox\obj\Release\MyToolBox.TempManagerForm.resources

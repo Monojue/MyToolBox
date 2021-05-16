@@ -24,6 +24,7 @@ namespace MyToolBox {
             TabPage tab = new TabPage(name);
             frm.Parent = tab;
             frm.Visible = true;
+            frm.Dock = DockStyle.Fill;
             tabControl.TabPages.Add(tab);
             //frm.Location = new Point((tab.Width - frm.Width) / 2, (tab.Height - frm.Height) / 2);
             //tabControl.SelectedTab = tab;

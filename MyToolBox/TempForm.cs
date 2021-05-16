@@ -16,6 +16,7 @@ namespace MyToolBox {
             InitializeComponent();
             cbCopy.Checked = true;
             cbox.SelectedIndex = 0;
+            lblnof.Text = "";
         }
 
         int i = 0;
@@ -23,6 +24,7 @@ namespace MyToolBox {
         Boolean groupCheck = false;
         string dir = "";
         string nextdir = "";
+        List<int> groupFile = new List<int>();
         RichTextBoxScrollBars scroll = new RichTextBoxScrollBars();
 
         private void btnBack_Click(object sender, EventArgs e) {
@@ -53,6 +55,7 @@ namespace MyToolBox {
                     } catch (IndexOutOfRangeException) {
                         dir = Path.GetDirectoryName(tbInput.Lines[tbInput.Lines.Count()]);
                     }
+                    groupFile.Add(i - 1);
                 }
                 tbShow.Text = tbInput.Lines[i - 1];
                 refreshtbInput();
@@ -96,6 +99,7 @@ namespace MyToolBox {
                     } catch (IndexOutOfRangeException) {
                         nextdir = Path.GetDirectoryName(tbInput.Lines[0]);
                     }
+                    groupFile.Add(i - 1);
                 }
                 tbShow.Text = tbInput.Lines[i - 1];
                 refreshtbInput();
@@ -150,13 +154,13 @@ namespace MyToolBox {
             
             for (int j = 0; j <= Lines.Count() - 1; j++) {
 
-                if (tbShow.Text.Equals(Lines[j]))
+                if (tbShow.Text.Equals(Lines[j]) || groupFile.Contains(j))
                     tbInput.SelectionColor = Color.Red;
 
                 if (movedfile.Contains(j))
                     tbInput.SelectionColor = Color.Green;
 
-                if (movedfile.Contains(j)&& tbShow.Text.Equals(Lines[j]))
+                if (movedfile.Contains(j) && tbShow.Text.Equals(Lines[j]))
                     tbInput.SelectionColor = Color.Blue;
 
                 if (j < Lines.Count() - 1)
@@ -189,7 +193,7 @@ namespace MyToolBox {
             copy = cbCopy.Checked;
         }
 
-        private void btnOpen_Click(object sender, EventArgs e) {
+        private void btnOpenFile_Click(object sender, EventArgs e) {
             Process.Start(tbShow.Text);
         }
 
@@ -200,6 +204,14 @@ namespace MyToolBox {
 
         private void cbGcheck_CheckedChanged(object sender, EventArgs e) {
             groupCheck = cbGcheck.Checked;
+        }
+
+        private void btnOpenTemp_Click(object sender, EventArgs e) {
+            Process.Start(tbPath.Text);
+        }
+
+        private void cbGcheck_CheckedChanged_1(object sender, EventArgs e) {
+            groupFile.Clear();
         }
     }
 }
