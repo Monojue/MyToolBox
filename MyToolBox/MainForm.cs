@@ -12,11 +12,14 @@ namespace MyToolBox {
     public partial class MainForm : Form {
         public MainForm() {
             InitializeComponent();
-            TempForm tempForm = new TempForm();
-            AddNewTab(tempForm, "Temp Control");
+            //TempForm tempForm = new TempForm();
+            //AddNewTab(tempForm, "Temp Control");
 
-            csExporter csForm = new csExporter();
-            AddNewTab(csForm, ".CS Exporter");
+            //csExporter csForm = new csExporter();
+            //AddNewTab(csForm, ".CS Exporter");
+
+            EntityBuilder entityBuilder = new EntityBuilder();
+            AddNewTab(entityBuilder, "Entity Builder");
         }
 
         private void AddNewTab(UserControl frm, string name) {
